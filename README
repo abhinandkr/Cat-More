@@ -3,9 +3,10 @@ cat <filename> | more
 
 It outputs in a more intuitive fashion that the regular cat command.
 
-It shows the path of the file (follows the link if the file is a symbolic link). It leaves the handling of directories and other files to the cat command inside it. It can handle escaped spaces in files, just like the cat command. If spaces are not escaped, it treats the words as separate files, i.e, space will be the default delimiter.
+It shows the path of the file (follows the link if the file is a symbolic link). It leaves the handling of directories and other files to the cat command inside it. It can handle escaped spaces in files, just like the cat command. If spaces are not escaped, it treats the words as separate files, i.e, space will be the default delimiter. It also accepts absolute and relative paths.
 
 Steps to use:
 1) Download the catm.sh file
 2) Add execute permissions: chmod u+x catm.sh
 3) Run: ./catm.sh <file1> <file2>
+	(3.1) If the filename has spaces, say the filename is "This is a file", use it as: ./catm.sh This\ is\ a\ file
